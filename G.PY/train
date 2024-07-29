@@ -1,0 +1,91 @@
+# import requests
+# def get_live_train_status(trainno):
+#     base_url="http://rappid.in/apis/train.php?train_no={}".format(trainno)
+#     response=requests.get(base_url)
+#     data=response.json()
+#     return data
+# train_number=16231
+# train_status=get_live_train_status(train_number)
+# print("**************************")
+# print("\t\t Train Name:",train_status["train_name"])
+# print("**************************")
+# for station_info in train_status["data"]:
+#     if station_info["is_current_station"]:
+#         print("now station \t\t\t\t:",station_info["station_name"])
+#         print("Distance from the starting \t:",station_info["distance"])
+#         print("timing \t\t\t\t\t\t:",station_info["timing"])
+#         print("delay \t\t\t\t\t\t:",station_info["delay"])
+#         print("platform no \t\t\t\t:",station_info["platform"])
+#         print("halt timing \t\t\t\t:",station_info["halt"])
+#     else:
+#         print(station_info["station_name"])
+#         print("******************************")
+#         print("\t\t messsage \t\t:",train_status["message"])
+#         print("\t\t message updated:",train_status["updated_time"])
+#         print("******************************")
+
+
+import pymysql as mysql
+connection=mysql.connect(host="localhost",user="root",password="livewire")
+print(connection)
+
+'''#create database
+import pymysql as mysql
+connection=mysql.connect(host="localhost",user="root",password="livewire")
+cursor=connection.cursor()
+cursor.execute("create database python17")
+
+#show all databases with in root user
+import pymysql as mysql
+connection=mysql.connect(host="localhost",user="root",password="livewire")
+cursor=connection.cursor()
+cursor.execute("show databases")
+for x in cursor:
+    print(x)
+
+
+#create table
+import pymysql as mysql
+connection=mysql.connect(host="localhost",user="root",password="livewire",database="python17")
+cursor=connection.cursor()
+#cursor.execute("CREATE TABLE departments(department_id iNT PRIMARY KEY,department_name VARCHAR(50))")
+cursor.execute("show tables")
+print("number of tables in database:")
+for x in cursor:
+    print("\t",x)
+
+
+import pymysql as mysql
+connection=mysql.connect(host="localhost",user="root",password="livewire",database="python17")
+cursor=connection.cursor()
+cursor.execute("CREATE TABLE employees(employee_id INT PRIMARY KEY,employee_name VARCHAR(100),department_id INT)")
+cursor.execute("show tables")
+print("number of tables in database:")
+for x in cursor:
+    print("\t",x)'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
